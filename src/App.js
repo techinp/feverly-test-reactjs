@@ -17,7 +17,7 @@ import {
 // import Backdrop from '@mui/material/Backdrop';
 // import CircularProgress from '@mui/material/CircularProgress';
 
-import MainPage from './pages/MainPage';
+import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Shop from './pages/Shop';
@@ -61,7 +61,7 @@ function App() {
       {/* <BrowserRouter> */}
       <Wrapper>
         <Routes>
-          <Route path='/' Component={MainPage}></Route>
+          <Route path='/' Component={Home}></Route>
           <Route path='/signin' Component={SignIn}></Route>
           <Route path='/signup' Component={SignUp}></Route>
           <Route path='/shop' Component={Shop}></Route>
