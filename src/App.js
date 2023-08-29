@@ -18,9 +18,10 @@ import {
 // import CircularProgress from '@mui/material/CircularProgress';
 
 import MainPage from './pages/MainPage';
-import Preferences from './pages/Preferences';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import Shop from './pages/Shop';
+import Banner from './pages/Banner';
 
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
@@ -42,6 +43,7 @@ function App() {
   // };
 
   useEffect(() => {
+    console.log('token', token);
     if (!token) {
       if (location.pathname === '/signup') {
         console.log('if');
@@ -59,10 +61,11 @@ function App() {
       {/* <BrowserRouter> */}
       <Wrapper>
         <Routes>
+          <Route path='/' Component={MainPage}></Route>
           <Route path='/signin' Component={SignIn}></Route>
           <Route path='/signup' Component={SignUp}></Route>
-          <Route path='/' Component={MainPage}></Route>
-          <Route path='/preferences' Component={Preferences}></Route>
+          <Route path='/shop' Component={Shop}></Route>
+          <Route path='/banner' Component={Banner}></Route>
         </Routes>
       </Wrapper>
       {/* </BrowserRouter> */}

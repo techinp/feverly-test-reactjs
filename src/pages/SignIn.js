@@ -117,7 +117,6 @@ export default function SignIn() {
         <section className='text-center mt-4'>
           <NavLink to={'/signup'}>
             <Button className='w-full'>Sign Up</Button>
-            {/* <a class='no-underline hover:underline text-blue-500'>Sign Up</a> */}
           </NavLink>
         </section>
       </form>
