@@ -16,13 +16,6 @@ export default function Header() {
 
   const handleSubmit = async (e) => {
     const response = await fetcher(signOut, METHOD.POST);
-    console.log('response :', response);
-
-    // setAlert({
-    //   open: true,
-    //   status: response.status,
-    //   message: response.message,
-    // });
 
     if (response.status === 0) {
       localStorage.removeItem('accessToken');
@@ -32,7 +25,9 @@ export default function Header() {
   };
   return (
     <section className='absolute h-20 w-full flex justify-between px-8 items-center'>
-      <section className='font-bold text-2xl hidden md:block'>Feverly Back Office</section>
+      <section className='font-bold text-2xl hidden md:block'>
+        Feverly Back Office
+      </section>
       <section className='flex justify-end items-center gap-4'>
         <NavLink to={'/'}>
           <Button variant='text'>Home</Button>

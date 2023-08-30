@@ -14,9 +14,6 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-// import Backdrop from '@mui/material/Backdrop';
-// import CircularProgress from '@mui/material/CircularProgress';
-
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -26,30 +23,17 @@ import Banner from './pages/Banner';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
 
-// import { useSelector, useDispatch } from 'react-redux';
-// import { toggleBackDrop } from './redux/reducer/app.slice';
-
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
   const token = localStorage.getItem('accessToken');
 
-  // const backdrop = useSelector((state) => state.app.backdrop);
-  // const dispatch = useDispatch();
-
-  // const handleClose = () => {
-  //   dispatch(toggleBackDrop(false));
-  // };
-
   useEffect(() => {
-    console.log('token', token);
     if (!token) {
       if (location.pathname === '/signup') {
-        console.log('if');
         navigate('/signup');
       } else {
-        console.log('else');
         navigate('/signin');
       }
     }

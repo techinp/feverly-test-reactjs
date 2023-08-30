@@ -10,7 +10,6 @@ export const appSlice = createSlice({
   initialState,
   reducers: {
     toggleBackDrop: (state, action) => {
-      console.log('action.payload :', action.payload);
       state.backdrop = action.payload;
     },
   },
